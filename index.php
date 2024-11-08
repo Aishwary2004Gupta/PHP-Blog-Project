@@ -60,7 +60,7 @@ $row=mysqli_num_rows($run);
 		<!-- Pagination begin -->
 		<?php 
 			$pagination="SELECT * FROM blog";
-		 $run_q=mysqli_query($config,$pagination);
+			$run_q=mysqli_query($config,$pagination);
 		 $total_post=mysqli_num_rows($run_q);
 		 $pages=ceil($total_post/$limit);
 		 if($total_post > $limit){
