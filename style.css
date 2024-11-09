@@ -87,9 +87,9 @@ body{
 	}
 }
 @media screen and (max-width: 992px) {
-  .flex-part1{
-	height: 8rem !important;
-  }
+	.flex-part1{
+		height: 8rem !important;
+	}
 }
 @media screen and (max-width: 1200px) {
 	.flex-part1{
