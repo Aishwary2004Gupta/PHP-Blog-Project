@@ -7,7 +7,7 @@ $query=mysqli_query($config,$select);
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Required meta tags --> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
