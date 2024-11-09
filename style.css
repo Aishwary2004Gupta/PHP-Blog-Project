@@ -75,13 +75,13 @@ body{
 	object-fit: contain;
 }
 @media screen and (max-width: 768px) {
-  .flex-part2 p{
-    display: none;
-  }
-  .flex-part1{
-	height: 6rem !important;
-  }
-  .flex-part2 ul{
+	.flex-part2 p{
+		display: none;
+	}
+	.flex-part1{
+		height: 6rem !important;
+	}
+	.flex-part2 ul{
 		display: flex;
 		flex-direction: column;
 	}
