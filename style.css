@@ -94,5 +94,5 @@ body{
 @media screen and (max-width: 1200px) {
   .flex-part1{
 	height: 10rem !important;
-  }
+	}
 }
