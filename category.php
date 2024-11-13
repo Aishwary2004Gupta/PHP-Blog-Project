@@ -34,7 +34,7 @@ $row=mysqli_num_rows($run);
             </p>
 		<ul>
 			<li class="me-2"><a href=""> <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
-                       	<?= $result['username'] ?> </a>
+                    <?= $result['username'] ?> </a>
 			</li>
 			<li class="me-2">
 			<a href=""> <span><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
