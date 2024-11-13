@@ -49,7 +49,7 @@ $query=mysqli_query($config,$select);
         </li>
       </ul>
       <?php 
-       if (isset($_GET['keyword'])) {
+      if (isset($_GET['keyword'])) {
          $keyword=$_GET['keyword'];
       }
       else
