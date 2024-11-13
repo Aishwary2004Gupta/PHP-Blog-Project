@@ -52,8 +52,8 @@ $query=mysqli_query($config,$select);
        if (isset($_GET['keyword'])) {
          $keyword=$_GET['keyword'];
        }
-       else
-       {
+      else
+      {
         $keyword="";
       }
       ?>
