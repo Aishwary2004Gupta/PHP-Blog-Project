@@ -55,7 +55,7 @@ $query=mysqli_query($config,$select);
        else
        {
         $keyword="";
-       }
+      }
       ?>
       <form class="d-flex" action="search.php" method="GET">
         <input class="form-control me-sm-2" type="text" placeholder="Search" name="keyword" required maxlength="70" autocomplete="off" value="<?= $keyword ?>">
