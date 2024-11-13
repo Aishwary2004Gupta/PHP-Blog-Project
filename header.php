@@ -36,7 +36,7 @@ $query=mysqli_query($config,$select);
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
           <div class="dropdown-menu">
-             <?php while($cats=mysqli_fetch_assoc($query)) {?>
+            <?php while($cats=mysqli_fetch_assoc($query)) {?>
             <a class="dropdown-item" href="category.php?id=<?= $cats['cat_id'] ?>">
               <?= $cats['cat_name'] ?>
             </a>
