@@ -50,7 +50,7 @@ $query=mysqli_query($config,$select);
       </ul>
       <?php 
       if (isset($_GET['keyword'])) {
-         $keyword=$_GET['keyword'];
+        $keyword=$_GET['keyword'];
       }
       else
       {
