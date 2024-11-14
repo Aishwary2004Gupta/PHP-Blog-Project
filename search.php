@@ -43,7 +43,7 @@ $row=mysqli_num_rows($run);
 				<?= strip_tags(substr($result['blog_body'], 0,200))."..." ?>
 			</a> <span><br>
                 <a href="single_post.php?id=<?= $result['blog_id'] ?>" class="btn btn-sm btn-outline-primary">Continue Reading
-                  </a></span>
+                </a></span>
             </p>
 		<ul>
 			<li class="me-2"><a href=""> <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
