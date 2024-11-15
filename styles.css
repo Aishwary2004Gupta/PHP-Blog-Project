@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
@@ -7,34 +7,93 @@ body {
     padding: 0;
 }
 
-/* Navbar */
+/* Navbar Styling */
 .navbar {
     background-color: #212529;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #f8f9fa !important;
+    color: #ffc107 !important;
+    margin-right: 2rem;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 .nav-link {
     color: #f8f9fa !important;
-}
-
-.nav-link.active {
-    color: #ffc107 !important;
+    font-size: 1rem;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
     color: #ffc107 !important;
 }
 
-/* Search Bar */
+.nav-item.active .nav-link,
+.nav-link.active {
+    color: #ffc107 !important;
+    font-weight: 600;
+    border-bottom: 2px solid #ffc107;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+    border: none;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+}
+
+.dropdown-item {
+    color: #f8f9fa !important;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #495057;
+    color: #ffc107 !important;
+}
+
+/* Search Bar Styling */
+form.d-flex {
+    align-items: center;
+}
+
 form.d-flex input[type="text"] {
     border-radius: 20px;
     border: 1px solid #ced4da;
     padding: 0.5rem 1rem;
+    width: 220px;
+    transition: width 0.3s ease;
+}
+
+form.d-flex input[type="text"]:focus {
+    width: 280px;
 }
 
 form.d-flex button {
@@ -44,6 +103,7 @@ form.d-flex button {
     border-radius: 20px;
     padding: 0.5rem 1.5rem;
     margin-left: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 form.d-flex button:hover {
