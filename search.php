@@ -74,7 +74,7 @@ $row=mysqli_num_rows($run);
 		$run_q=mysqli_query($config,$pagination);
 		$total_post=mysqli_num_rows($run_q);
 		$pages=ceil($total_post/$limit);
-		 if($total_post > $limit){
+		if($total_post > $limit){
 		?>
 		<ul class="pagination pt-2 pb-5">
 			<?php for ($i=1; $i <=$pages ; $i++) { ?>
