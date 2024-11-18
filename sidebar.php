@@ -20,7 +20,7 @@ $query2=mysqli_query($config,$select2);
             <?php } ?>
             </ul>
          </div>
-          <div id="posts">
+         <div id="posts">
             <h6>Recent Posts</h6>
             <ul>
             <?php while($posts=mysqli_fetch_assoc($query2)) {?>
