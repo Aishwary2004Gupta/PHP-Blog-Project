@@ -127,4 +127,4 @@ if (!isset($_SESSION['user_data'])) {
             </li>
          </ul>
       </nav>
-   <!-- End header -->
+<!-- End header -->
