@@ -1,1 +1,1 @@
-# Dynamic Blog
+# Dynamic Blog Website
