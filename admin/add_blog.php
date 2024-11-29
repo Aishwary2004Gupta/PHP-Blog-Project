@@ -1,6 +1,6 @@
- <?php include "header.php"; 
+<?php include "header.php"; 
 if (isset($_SESSION['user_data'])) {
-	$author_id=$_SESSION['user_data']['0'];
+	$author_id=$_SESSION['user_data']['0']; 
 }
 $sql="SELECT * FROM categories";
 $query=mysqli_query($config,$sql);
