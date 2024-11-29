@@ -71,7 +71,7 @@ if (isset($_POST['add_blog'])) {
 				$_SESSION['msg']=$msg;
 		    	header("location:add_blog.php");
 			}
-		}
+		} 
 		else
 		{
 			$msg=['image size should not be greater than 2mb','alert-danger'];
