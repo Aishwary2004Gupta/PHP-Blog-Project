@@ -1,5 +1,5 @@
 <?php include "header.php";
-if ($admin!=1) {
+if ($admin!=1) { 
 	header("location:index.php");
 }
 ?>
