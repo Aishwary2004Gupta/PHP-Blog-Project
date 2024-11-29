@@ -18,7 +18,6 @@ if ($admin!=1) {
 						</div>
 						<div class="mb-3">
 							<input type="submit" name="add_cat" value="Add" class="btn btn-primary">
-
 							<a href="categories.php" class="btn btn-secondary">Back</a>
 						</div>
 					</form>
