@@ -64,3 +64,11 @@ Follow these steps to set up and run the project locally:
      ```  
 
 ---
+
+## **Usage**  
+
+- Navigate to the homepage to view all blogs.  
+- Log in or register to create, edit, or delete blog posts.  
+- Explore features like search, category filters, and more.  
+
+---
