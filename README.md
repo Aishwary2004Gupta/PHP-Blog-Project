@@ -22,3 +22,7 @@ A simple and functional blog platform built using PHP and MySQL, providing users
 - **Other Tools**: Bootstrap (for styling), XAMPP (for local development)  
 
 ---
+
+## **Installation**  
+
+Follow these steps to set up and run the project locally:  
