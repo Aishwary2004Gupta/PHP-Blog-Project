@@ -26,3 +26,8 @@ A simple and functional blog platform built using PHP and MySQL, providing users
 ## **Installation**  
 
 Follow these steps to set up and run the project locally:  
+
+### Prerequisites  
+- PHP installed on your system (version 7.4 or higher recommended).  
+- MySQL server running (can use XAMPP or any other tool).  
+- A web server (e.g., Apache).  
