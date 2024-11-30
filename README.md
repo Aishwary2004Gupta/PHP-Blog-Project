@@ -31,3 +31,36 @@ Follow these steps to set up and run the project locally:
 - PHP installed on your system (version 7.4 or higher recommended).  
 - MySQL server running (can use XAMPP or any other tool).  
 - A web server (e.g., Apache).  
+
+### Steps  
+1. **Clone the Repository**:  
+   ```bash  
+   git clone https://github.com/Aishwary2004Gupta/PHP-Blog-Project.git  
+   ```  
+2. **Navigate to the Project Directory**:  
+   ```bash  
+   cd PHP-Blog-Project  
+   ```  
+3. **Import the Database**:  
+   - Open your MySQL management tool (phpMyAdmin or similar).  
+   - Create a new database, e.g., `blog_database`.  
+   - Import the `blog_database.sql` file from the project folder.  
+
+4. **Update Configuration**:  
+   - Open `config.php` (or equivalent) and update the database credentials:  
+     ```php  
+     $db_host = 'localhost';  
+     $db_user = 'your_username';  
+     $db_pass = 'your_password';  
+     $db_name = 'blog_database';  
+     ```  
+
+5. **Start the Server**:  
+   - If using XAMPP, place the project folder in the `htdocs` directory.  
+   - Start Apache and MySQL from the XAMPP control panel.  
+   - Open your browser and navigate to:  
+     ```
+     http://localhost/PHP-Blog-Project  
+     ```  
+
+---
