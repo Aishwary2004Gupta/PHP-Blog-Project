@@ -1,4 +1,4 @@
-# PHP Blog Project  
+
 
 A simple and functional blog platform built using PHP and MySQL, providing users with features like creating, managing, and viewing blog posts. This project serves as a foundation for understanding the core principles of web development and PHP programming.
 
@@ -11,5 +11,14 @@ A simple and functional blog platform built using PHP and MySQL, providing users
 - MySQL database integration for storing and retrieving blog data.  
 - Secure user authentication system.  
 - Responsive design for seamless experience across devices.  
+
+---
+
+## **Technologies Used**  
+
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: PHP  
+- **Database**: MySQL  
+- **Other Tools**: Bootstrap (for styling), XAMPP (for local development)  
 
 ---
