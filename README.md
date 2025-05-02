@@ -58,7 +58,7 @@ Follow these steps to set up and run the project locally:
      $db_pass = 'your_password';
      $db_name = 'blog_database';
      ```
-
+ 
 5. **Start the Server**:
    - If using XAMPP, place the project folder in the `htdocs` directory.
    - Start Apache and MySQL from the XAMPP control panel.
