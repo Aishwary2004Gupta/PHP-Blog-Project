@@ -100,7 +100,7 @@ body {
 /* Dark mode styles */
 body.dark-mode {
     background-color: #181818;
-    color: #f1f1f1;
+    color: #4a1e1e;
 }
 
 body.dark-mode a {
@@ -110,16 +110,39 @@ body.dark-mode a {
 /* Add more dark mode overrides as needed */
 
 /* Toggle button styles */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    z-index: 10;
+}
+
 #darkModeToggle {
     background: none;
     border: none;
-    font-size: 1.5em;
+    font-size: 1.7em;
     cursor: pointer;
-    margin-left: 10px;
-    color: inherit;
-    transition: color 0.2s;
+    color: #555;
+    padding: 4px 8px;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
 }
 
-#darkModeToggle:focus {
-    outline: 2px solid #8ab4f8;
+#darkModeToggle:hover, #darkModeToggle:focus {
+    background: #e0e0e0;
+    color: #222;
+    outline: none;
+}
+
+body.dark-mode #darkModeToggle {
+    color: #ffe066;
+    background: none;
+}
+
+body.dark-mode #darkModeToggle:hover, body.dark-mode #darkModeToggle:focus {
+    background: #333;
+    color: #fff;
 }
