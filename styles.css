@@ -390,9 +390,9 @@ body.dark-mode .flex-part1 {
   background: #181c24;
 }
 
-body.dark-mode .flex-part1 img {
-  /* No filter for images, but you can add a slight darken if needed */
-}
+/* body.dark-mode .flex-part1 img {
+  /* No filter for images, but you can add a slight darken if needed 
+} */
 
 body.dark-mode .flex-part2 {
   color: #ffe6a7;
@@ -445,9 +445,9 @@ body.dark-mode #single_img {
   box-shadow: 0 8px 32px rgba(20, 20, 30, 0.25);
 }
 
-body.dark-mode #single_img img {
-  /* No filter for images, but you can add a slight darken if needed */
-}
+/* body.dark-mode #single_img img {
+  /* No filter for images, but you can add a slight darken if needed 
+} */
 
 /* Optional: style scrollbars for dark mode */
 body.dark-mode ::-webkit-scrollbar {
