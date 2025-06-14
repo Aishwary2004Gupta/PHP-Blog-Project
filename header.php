@@ -57,15 +57,10 @@ $query=mysqli_query($config,$select);
         $keyword="";
       }
       ?>
-      <div class="d-flex align-items-center">
-        <form class="d-flex" action="search.php" method="GET">
-          <input class="form-control me-sm-2" type="text" placeholder="Search" name="keyword" required maxlength="70" autocomplete="off" value="<?= $keyword ?>">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <button id="darkModeToggle" class="btn btn-outline-light ms-2" title="Toggle dark mode">
-          <i class="fa fa-moon-o" aria-hidden="true"></i>
-        </button>
-      </div>
+      <form class="d-flex" action="search.php" method="GET">
+        <input class="form-control me-sm-2" type="text" placeholder="Search" name="keyword" required maxlength="70" autocomplete="off" value="<?= $keyword ?>">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>
