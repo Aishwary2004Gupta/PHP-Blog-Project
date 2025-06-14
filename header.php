@@ -17,50 +17,55 @@ $query=mysqli_query($config,$select);
 
     <title>Blog</title>
   </head>
-  <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Blog</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link <?= ($page=="index")? 'active':''; ?>" href="index.php">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
-          <div class="dropdown-menu">
-            <?php while($cats=mysqli_fetch_assoc($query)) {?>
-            <a class="dropdown-item" href="category.php?id=<?= $cats['cat_id'] ?>">
-              <?= $cats['cat_name'] ?>
-            </a>
-            <?php } ?>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link <?= ($page=="index")? 'active':''; ?>" href="index.php">Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+              <div class="dropdown-menu">
+                <?php while($cats=mysqli_fetch_assoc($query)) {?>
+                <a class="dropdown-item" href="category.php?id=<?= $cats['cat_id'] ?>">
+                  <?= $cats['cat_name'] ?>
+                </a>
+                <?php } ?>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <?= ($page=="login")? 'active':''; ?>" href="login.php">Login
+              </a>
+            </li>
+          </ul>
+          <?php 
+          if (isset($_GET['keyword'])) {
+            $keyword=$_GET['keyword'];
+          }
+          else
+          {
+            $keyword="";
+          }
+          ?>
+          <div class="d-flex align-items-center" style="gap: 0.5rem;">
+            <form class="d-flex" action="search.php" method="GET" style="margin-bottom:0;">
+              <input class="form-control me-sm-2" type="text" placeholder="Search" name="keyword" required maxlength="70" autocomplete="off" value="<?= $keyword ?>">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button id="darkModeToggle" type="button" title="Toggle dark mode" style="background:none; border:none; font-size:1.7em; cursor:pointer; color:#f7c873; margin-left:8px; display:flex; align-items:center;">
+              <span id="darkModeIcon">🌙</span>
+            </button>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link <?= ($page=="login")? 'active':''; ?>" href="login.php">Login
-          </a>
-        </li>
-      </ul>
-      <?php 
-      if (isset($_GET['keyword'])) {
-        $keyword=$_GET['keyword'];
-      }
-      else
-      {
-        $keyword="";
-      }
-      ?>
-      <form class="d-flex" action="search.php" method="GET">
-        <input class="form-control me-sm-2" type="text" placeholder="Search" name="keyword" required maxlength="70" autocomplete="off" value="<?= $keyword ?>">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+        </div>
+      </div>
+    </nav>
