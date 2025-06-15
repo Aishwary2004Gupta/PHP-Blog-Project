@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!icon && toggle) {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
-        icon.style.pointerEvents = 'none';
         toggle.appendChild(icon);
     }
 
@@ -26,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     setDarkMode(darkPref === 'enabled');
 
     if (toggle) {
-        toggle.addEventListener('click', function () {
+        toggle.addEventListener('click', function (e) {
+            // Prevent form submission if inside a form
+            e.preventDefault();
             const isDark = !body.classList.contains('dark-mode');
             setDarkMode(isDark);
             localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
