@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // JS and PHP are fully compatible for this use-case.
+    // Make sure:
+    // 1. The <button id="darkModeToggle"> is present in your HTML.
+    // 2. The script is included at the end of <body> or after the button in the DOM.
+    // 3. There are no JS errors in the browser console.
+
     const toggle = document.getElementById('darkModeToggle');
     const body = document.body;
 
@@ -7,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!icon && toggle) {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
+        icon.style.marginLeft = '2px';
         toggle.appendChild(icon);
     }
 
@@ -26,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (toggle) {
         toggle.addEventListener('click', function (e) {
-            // Prevent form submission if inside a form
             e.preventDefault();
             const isDark = !body.classList.contains('dark-mode');
             setDarkMode(isDark);
