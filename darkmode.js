@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('darkModeToggle');
-    const icon = document.getElementById('darkModeIcon');
     const body = document.body;
+
+    // Create icon if not present
+    let icon = document.getElementById('darkModeIcon');
+    if (!icon && toggle) {
+        icon = document.createElement('span');
+        icon.id = 'darkModeIcon';
+        icon.style.pointerEvents = 'none';
+        toggle.appendChild(icon);
+    }
 
     function setDarkMode(enabled) {
         if (enabled) {
@@ -19,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (toggle) {
         toggle.addEventListener('click', function () {
-            const isDark = body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+            const isDark = !body.classList.contains('dark-mode');
             setDarkMode(isDark);
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
         });
     }
 });
