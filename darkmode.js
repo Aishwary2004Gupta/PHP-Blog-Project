@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
         icon.style.marginLeft = '2px';
+        // Ensure the icon does not cover the button (no pointer-events)
+        icon.style.pointerEvents = 'none';
         toggle.appendChild(icon);
     }
 
@@ -26,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
     setDarkMode(darkPref === 'enabled');
 
     if (toggle) {
+        // Use only e.preventDefault() if inside a form, otherwise just toggle
         toggle.addEventListener('click', function (e) {
-            e.stopPropagation();
+            // Remove stopPropagation, just preventDefault if needed
             e.preventDefault();
             const isDark = !body.classList.contains('dark-mode');
             setDarkMode(isDark);
