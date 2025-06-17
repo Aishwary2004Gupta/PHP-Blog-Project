@@ -1,29 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // JS and PHP are fully compatible for this use-case.
-    // Make sure:
-    // 1. The <button id="darkModeToggle"> is present in your HTML.
-    // 2. The script is included at the end of <body> or after the button in the DOM.
-    // 3. There are no JS errors in the browser console.
-
     const toggle = document.getElementById('darkModeToggle');
     const body = document.body;
 
-    // Create icon if not present
+    // Always create or update the icon
     let icon = document.getElementById('darkModeIcon');
-    if (!icon && toggle) {
+    if (!icon) {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
         icon.style.marginLeft = '2px';
-        toggle.appendChild(icon);
+        toggle && toggle.appendChild(icon);
     }
 
     function setDarkMode(enabled) {
         if (enabled) {
             body.classList.add('dark-mode');
-            if (icon) icon.textContent = '☀️';
+            icon.textContent = '☀️';
         } else {
             body.classList.remove('dark-mode');
-            if (icon) icon.textContent = '🌙';
+            icon.textContent = '🌙';
         }
     }
 
@@ -32,12 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
     setDarkMode(darkPref === 'enabled');
 
     if (toggle) {
-        toggle.addEventListener('click', function (e) {
+        toggle.onclick = function (e) {
             e.preventDefault();
             const isDark = !body.classList.contains('dark-mode');
             setDarkMode(isDark);
             localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-        });
+        };
     }
 });
 
