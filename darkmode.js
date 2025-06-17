@@ -4,20 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Always create or update the icon
     let icon = document.getElementById('darkModeIcon');
-    if (!icon) {
+    if (!icon && toggle) {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
         icon.style.marginLeft = '2px';
-        toggle && toggle.appendChild(icon);
+        toggle.appendChild(icon);
     }
 
     function setDarkMode(enabled) {
         if (enabled) {
             body.classList.add('dark-mode');
-            icon.textContent = '☀️';
+            if (icon) icon.textContent = '☀️';
         } else {
             body.classList.remove('dark-mode');
-            icon.textContent = '🌙';
+            if (icon) icon.textContent = '🌙';
         }
     }
 
@@ -26,12 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
     setDarkMode(darkPref === 'enabled');
 
     if (toggle) {
-        toggle.onclick = function (e) {
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
             e.preventDefault();
             const isDark = !body.classList.contains('dark-mode');
             setDarkMode(isDark);
             localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-        };
+        });
     }
 });
 
