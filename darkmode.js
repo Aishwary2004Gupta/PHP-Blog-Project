@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
         icon.style.marginLeft = '2px';
-        // Ensure the icon 
+        // Ensure the 
         icon.style.pointerEvents = 'none';
         toggle.appendChild(icon);
     }
