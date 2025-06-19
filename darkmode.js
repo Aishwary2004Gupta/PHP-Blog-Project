@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         icon = document.createElement('span');
         icon.id = 'darkModeIcon';
         icon.style.marginLeft = '2px';
-        // Ensure the icon does not cover the button (no pointer-events)
+        // Ensure the icon does not cover the button (no pointer-
         icon.style.pointerEvents = 'none';
         toggle.appendChild(icon);
     }
