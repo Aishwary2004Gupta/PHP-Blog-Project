@@ -39,4 +39,3 @@ document.addEventListener('DOMContentLoaded', function () {
 // This script is for use in a PHP project that outputs HTML.
 // You do not need a separate .html file.
 // Make sure your PHP template outputs a button like:
-// <button id="darkModeToggle" type="button"><span id="darkModeIcon"></span></button>
