@@ -36,4 +36,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// This script is for use in a PHP proje
+// This 
