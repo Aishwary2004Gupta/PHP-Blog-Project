@@ -40,4 +40,3 @@ document.addEventListener('DOMContentLoaded', function () {
 // You do not need a separate .html file.
 // Make sure your PHP template outputs a button like:
 // <button id="darkModeToggle" type="button"><span id="darkModeIcon"></span></button>
-// and includes this script after that button in the HTML output.
