@@ -36,5 +36,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// This script is for use in a PHP project that outputs HTML.
-// You do not need a separate .html file.
+// This script is for use in a PHP proje
